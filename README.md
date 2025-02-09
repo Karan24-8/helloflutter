@@ -2,18 +2,17 @@
 
 ## Tasks
 
-### Task 1: Center the title in the `AppBar`.
+### Task 1: Add a like button to each item.
 
-### Task 2: Add a Flutter logo in the `AppBar` to the left of the title.
-
-### Task 3: Add a line between all `HelloFlutterWidget`s in the list.
+### Task 2: Create a new HelloFlutterPage containing the flag, like status, "Hello Flutter" in that language and "Speak" button. In the HomePage, just show the like status and language name (like English, French, etc) for each item.
 
 ## Guide
 
 1. Fork this project (click on the `Fork` button on the top-right).
 2. Clone your forked project.
 3. Complete the tasks above.
-4. Commit the changes, push them to your fork, and create a Pull Request.
+4. Commit the changes and push them to your fork, and
+5. Create a Pull Request.
 
 ## Resources
 
