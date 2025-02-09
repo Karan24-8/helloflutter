@@ -21,30 +21,34 @@ class _HelloFlutterAppState extends State<HelloFlutterApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: themeIsLight ? ThemeData.light() : ThemeData.dark(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello Flutter'),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: IconButton(
-                onPressed: () {
-                  setState(() {
-                    themeIsLight = !themeIsLight;
-                  });
-                },
-                icon: Icon(themeIsLight ? Icons.dark_mode : Icons.light_mode),
-              ),
+      home: Builder(
+        builder: (context) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text('Hello Flutter'),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        themeIsLight = !themeIsLight;
+                      });
+                    },
+                    icon: Icon(themeIsLight ? Icons.dark_mode : Icons.light_mode),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-        body: ListView(
-          children: HelloFlutter.allLanguages
-              .map(
-                (e) => HelloFlutterWidget(e),
-              )
-              .toList(),
-        ),
+            body: ListView(
+              children: HelloFlutter.allLanguages
+                  .map(
+                    (e) => HelloFlutterWidget(e),
+                  )
+                  .toList(),
+            ),
+          );
+        },
       ),
     );
   }
